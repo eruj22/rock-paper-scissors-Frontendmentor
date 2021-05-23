@@ -1,5 +1,7 @@
 # Frontend Mentor - Rock, Paper, Scissors
 
+This was really interesting and challenging project for me. Here I think I overcomplicated on the code. In app.js you can see a lot of variables used and code is long. But at the end the game is working and I am happy with the result. You can check it out live on this link: <a href="https://youthful-noether-94a6d4.netlify.app/">https://youthful-noether-94a6d4.netlify.app/</a>.
+
 ![Design preview for the Rock, Paper, Scissors coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
