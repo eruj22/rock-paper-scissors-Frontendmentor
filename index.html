@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet"> 
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="header-text">
+        <p>rock</p>
+        <p>paper</p>
+        <p>scissors</p>
+      </div>
+      <div class="score">
+        <p>score</p>
+        <span>0</span>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="result">
+    <span>you win</span>
+    <button class="btn-play">play again</button>
+  </div>
+  
+  <main>
+    <div class="disable"></div>
+    <div class="container-game">
+      <div class="play-body paper" data-id="paper">
+        <img src="images/icon-paper.svg" class="img1" data-id="paper" alt="paper">
+      </div>
+    </div>
+    <div class="container-game">
+      <div class="play-body scissors" data-id="scissors">
+        <img src="images/icon-scissors.svg" class="img3" data-id="scissors" alt="scissors">
+      </div>
+    </div>
+    <div class="container-game">
+      <div class="play-body rock" data-id="rock">
+        <img src="images/icon-rock.svg" data-id="rock" class="img2" alt="rock">
+      </div>
+    </div>
+
+    <!-- default circles at the start -->
+    <div class="first-state">
+      <div class="container-game">
+        <p class="text">you picked</p>
+        <div class="default">
+        </div>
+      </div>
+      <div class="container-game">
+        <p class="text">house picked</p>
+        <div class="default">
+        </div>
+      </div>  
+    </div>
+
+    <!-- circles when we enter our selection -->
+    <div class="user-state">
+      <div class="container-game user paper1">
+        <div class="play-body paper">
+          <img src="images/icon-paper.svg" alt="paper">
+        </div>
+      </div>
+      <div class="container-game user scissors1">
+        <div class="play-body scissors" data-id="scissors">
+          <img src="images/icon-scissors.svg" alt="scissors">
+        </div>
+      </div>
+      <div class="container-game user rock1">
+        <div class="play-body rock" data-id="rock">
+          <img src="images/icon-rock.svg" alt="rock">
+        </div>
+      </div>
+    </div>
+
+    <!-- circles when we computer chooses -->
+    <div class="computer-state">
+      <div class="container-game computer paper2">
+        <div class="play-body paper">
+          <img src="images/icon-paper.svg" alt="paper">
+        </div>
+      </div>
+      <div class="container-game computer scissors2">
+        <div class="play-body scissors" data-id="scissors">
+          <img src="images/icon-scissors.svg" alt="scissors">
+        </div>
+      </div>
+      <div class="container-game computer rock2">
+        <div class="play-body rock" data-id="rock">
+          <img src="images/icon-rock.svg" alt="rock">
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <button class="rules">
+    <p>rules</p>
+  </button>
+  <div class="rules-modal">
+    <div class="modal-container">
+      <div class="modal-top">
+        <span>rules</span>
+        <button class="btn-modal">
+          <img src="images/icon-close.svg" alt="">
+        </button>
+      </div>
+      <img src="images/image-rules.svg" alt="rules">
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

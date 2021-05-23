@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* gradients */
+
+  /* neutral colors */
+  --clr-dark-text: hsl(229, 25%, 31%);
+  --clr-score-text: hsl(229, 64%, 46%);
+  --clr-header-outline: hsl(217, 16%, 45%);
+
+  /* background color */
+  background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+  height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: var(--clr-dark-text);
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+p {
+  text-transform: uppercase;
+  color: white;
+}
+
+.header-container {
+  margin: 10px auto 0;
+  width: 80%;
+  max-width: 700px;
+  border: 1px solid var(--clr-header-outline);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header-text {
+  font-size: 30px;
+  line-height: 0.8;
+  margin-left: 1rem;
+}
+
+.score {
+  background-color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.4rem;
+  text-align: center;
+}
+
+.score p {
+  color: var(--clr-dark-text);
+}
+
+span {
+  font-size: 50px;
+  line-height: 1;
+}
+
+.rules {
+  position: absolute;
+  right: 3rem;
+  bottom: 3rem;
+  padding: 0.5rem 3rem;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* modal top */
+.rules-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.rules-modal.active {
+  display: flex;
+}
+
+.modal-container {
+  display: none;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.modal-container.active {
+  display: block;
+}
+
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.modal-top span {
+  font-size: 30px;
+}
+
+/* result */
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin: 5px auto 0;
+  visibility: hidden;
+}
+
+.result span {
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.btn-play {
+  background-color: #fff;
+  color: var(--clr-dark-text);
+  padding: .5rem 2.5rem;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* disable */
+.disable {
+  background-color: transparent;
+  position: absolute;
+  display: none;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 100%;
+}
+
+.disable.disabled {
+  display: block;
+}
+
+/* main part of the game */
+main {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: 50px auto 0;
+  background-image: url(images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: 200px 160px;
+}
+
+.play-header {
+  text-align: center;
+}
+
+.play-body {
+  cursor: pointer;
+  margin: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #E6E6E4;
+}
+
+.play-body.hidden {
+  display: none;
+}
+
+/* styling circles */
+.rock {
+  border: 20px solid hsl(349, 70%, 56%);
+}
+
+.paper{
+  border: 20px solid hsl(230, 89%, 65%);
+}
+
+.scissors {
+  border: 20px solid hsl(40, 84%, 53%);
+}
+
+/* first state */
+.first-state {
+    position: absolute;
+    top: 20px;
+    z-index: -1;
+    display: flex;
+}
+
+.default {
+  width: 162px;
+  height: 162px;
+  border: none;
+  border-radius: 50%;
+  background-color: #15223b;
+  margin: 35px 86px;
+}
+
+.text {
+  text-align: center;
+  font-size: 24px;
+  transform: translateY(-20px);
+  visibility: hidden;
+}
+
+/* second state */
+.user-state {
+    position: absolute;
+    left: 35px;
+}
+
+.user {
+    display: none;
+}
+
+.user.active1 {
+    display: block;
+}
+
+/* second state */
+.computer-state {
+    position: absolute;
+    right: 35px;
+}
+
+.computer {
+    display: none;
+}
+
+.computer.active2 {
+    display: block;
+}
